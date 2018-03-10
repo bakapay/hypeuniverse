@@ -45,6 +45,7 @@ const embed = new Discord.RichEmbed()
 .setFooter("Mulțumim că ai ales serverul nostru <3")
 
 member.send(embed)
+});
 	
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
