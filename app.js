@@ -31,9 +31,9 @@ guild.createRole({
 
 client.on("guildMemberAdd", member => {
 if(member.guild.id != "420589257179267074") return;
-	member.guild.channels.get("420591714852667403").setName("Total Users : " + member.guild.members.size + "")
-	member.guild.channels.get("420591914560258059").setName("Humans : " + member.guild.members.filter(m => !m.user.bot).size + "")
-	member.guild.channels.get("420591790807187476").setName("Bots : " + member.guild.members.filter(m => m.user.bot).size + "")
+	member.guild.channels.get("420591714852667403").setName("Total Users : " + member.guild.members.size)
+	member.guild.channels.get("420591914560258059").setName("Humans : " + member.guild.members.filter(m => !m.user.bot).size)
+	member.guild.channels.get("420591790807187476").setName("Bots : " + member.guild.members.filter(m => m.user.bot).size)
 	});
 	
 client.on("guildMemberRemove", member => {
