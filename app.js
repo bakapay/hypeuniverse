@@ -37,7 +37,7 @@ if(member.guild.id != "420589257179267074") return;
 	});
 
 client.on("guildMemberAdd", member => {
-if(message.author.bot) return;
+if(member.bot) return;
 
 const embed = new Discord.RichEmbed()
 .setImage("https://cdn.discordapp.com/attachments/421661742498840577/422105435365965834/U.png")
