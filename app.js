@@ -47,7 +47,7 @@ client.on("guildMemberAdd", member => {
 if(member.guild.id != "420589257179267074") return;
 
 let roleu = member.guild.roles.find("name", "Member (★☆☆☆☆)")
-let memberu = member.guild.members.get(member.id)
+let memberu = client.guilds.find("name", "HYPEUNIVERSE®").members.get(member.id)
 
 memberu.addRole(roleu.id)
 });
