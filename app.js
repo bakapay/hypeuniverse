@@ -47,8 +47,9 @@ client.on("guildMemberAdd", member => {
 if(member.guild.id != "420589257179267074") return;
 
 let roleu = member.guild.roles.find("name", "Member (★☆☆☆☆)")
+let memberu = member.guild.members.get(member.id)
 
-member.guild.member(member.id).addRole(roleu.id)
+memberu.addRole(roleu.id)
 });
 	
 client.commands = new Discord.Collection();
