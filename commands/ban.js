@@ -46,7 +46,7 @@ const k = new Discord.RichEmbed()
 	.setFooter("Banned by " + message.author.username)
     .setTimestamp()
     .setColor(0x070707)
-    message.channel.send(mod)
+    message.guild.channels.get("421650187555962880").send(mod)
 	
 if(time > 0){
     setTimeout(function() {
