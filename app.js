@@ -40,7 +40,7 @@ client.on("guildMemberAdd", member => {
 if(member.bot) return;
 
 const embed = new Discord.RichEmbed()
-.setImage("https://cdn.discordapp.com/attachments/421661742498840577/422105435365965834/U.png")
+.setImage("https://cdn.discordapp.com/attachments/421661742498840577/422108179032440833/U.png")
 .setColor(0x070707)
 .setFooter("Mulțumim că ai ales serverul nostru <3")
 
