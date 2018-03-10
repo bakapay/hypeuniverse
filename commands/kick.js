@@ -34,7 +34,7 @@ let vemoji = client.guilds.get("418461344707248129").emojis.find("name", "CHV")
 	.setFooter("Kicked by " + message.author.username)
     .setTimestamp()
     .setColor(0x070707)
-    message.channel.send(mod)
+    message.guild.channels.get("421650187555962880").send(mod)
   };
 exports.conf = {
   enabled: true,
