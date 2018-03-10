@@ -44,6 +44,7 @@ if(member.guild.id != "420589257179267074") return;
 	});
 	
 client.on("guildMemberAdd", member => {
+if(member.bot) return;
 if(member.guild.id != "420589257179267074") return;
 let roleu = member.guild.roles.find("name", "Member (★☆☆☆☆)")
 member.addRole(roleu.id)
