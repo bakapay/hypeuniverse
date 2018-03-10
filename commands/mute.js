@@ -18,7 +18,7 @@ if (!member)
 return message.channel.sendEmbed(k)
 if (member.id === message.author.id) return message.channel.send(xemoji + " You cannot mute yourself, baka!")
 if(!member.kickable) return message.channel.send(xemoji + " I'm sorry, but i cannot mute this member.")
-let r = message.content.split(" ").slice(2)
+let r = args.slice(2).join(" ")
 let reason = "reason"
 if (!r) {
   reason = xemoji + " No reason provided."
@@ -45,7 +45,7 @@ member.send("You were muted in " + message.guild + ", " + reason)}
 	.setFooter("Muted by " + message.author.username)
     .setTimestamp()
     .setColor(0x070707)
-  message.channel.sendEmbed(mod)
+  message.guild.channels.get("421650187555962880").send(mod)
 
   setTimeout(function() {
     member.removeRole(mr.id)
