@@ -35,6 +35,16 @@ if(member.guild.id != "420589257179267074") return;
 	member.guild.channels.get("420591914560258059").setName("Humans : " + member.guild.members.filter(m => !m.user.bot).size + "")
 	member.guild.channels.get("420591790807187476").setName("Bots : " + member.guild.members.filter(m => m.user.bot).size + "")
 	});
+
+client.on("guildMemberAdd", member => {
+if(message.author.bot) return;
+
+const embed = new Discord.RichEmbed()
+.setImage("https://cdn.discordapp.com/attachments/421661742498840577/422105435365965834/U.png")
+.setColor(0x070707)
+.setFooter("Mulțumim că ai ales serverul nostru <3")
+
+member.send(embed)
 	
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
