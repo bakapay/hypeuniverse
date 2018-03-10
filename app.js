@@ -21,13 +21,6 @@ client.on("ready", () => {
 	client.user.setStatus("dnd")
 });
 
-client.on("guildCreate", guild => {
-guild.createRole({
-  name: "Muted",
-  color: "070707",
-  })
-   });
-
 
 client.on("guildMemberAdd", member => {
 if(member.guild.id != "420589257179267074") return;
@@ -42,13 +35,6 @@ if(member.guild.id != "420589257179267074") return;
 	member.guild.channels.get("420591914560258059").setName("Humans : " + member.guild.members.filter(m => !m.user.bot).size + "")
 	member.guild.channels.get("420591790807187476").setName("Bots : " + member.guild.members.filter(m => m.user.bot).size + "")
 	});
-	
-client.on("guildMemberAdd", member => {
-if(member.bot) return;
-if(member.guild.id != "420589257179267074") return;
-let roleu = member.guild.roles.find("name", "Member (★☆☆☆☆)")
-member.addRole(roleu.id)
-});
 	
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
