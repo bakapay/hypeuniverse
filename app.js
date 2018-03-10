@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
 const prefix = "/"
-const db = require('quick.db');
 const bot = new Discord.Client();
 
 require('./util/eventLoader')(client);
@@ -95,4 +94,4 @@ client.elevation = message => {
 };
 
 
-client.login("NDIwNTkzNDc2NDMwNzI1MTIx.DYA7xA.tNmmrAHfT9MViH0x5Zc-q9BzQZA");
+client.login(process.env.BOT_TOKEN);
