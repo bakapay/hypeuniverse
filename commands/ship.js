@@ -13,7 +13,7 @@ if (message.mentions.users.size < 1) return message.channel.send(k)
 
 if(user.id === message.author.id) return message.channel.send(xemoji + " You must mention another person, baka!")
 if(rating < 25) return message.channel.send("**" + message.author.username + "** :heart: **" + user.username + "** **|** **" + rating + "%** - Meh :cold_sweat:")
-if(rating < 60) return message.channel.send("**" + message.author.username + "** :heart: **" + user.username + "** **|** **" + rating + "%** - Greate :smile:")
+if(rating < 60) return message.channel.send("**" + message.author.username + "** :heart: **" + user.username + "** **|** **" + rating + "%** - Grate :smile:")
 if(rating > 80) return message.channel.send("**" + message.author.username + "** :heart: **" + user.username + "** **|** **" + rating + "%** - Amazing :heart_eyes:")
 if(rating === 100) return message.channel.send("**" + message.author.username + "** :heart: **" + user.username + "** **|** **" + rating + "%** - PERFECT :heart_exclamation:")	
 };
