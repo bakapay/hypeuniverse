@@ -5,21 +5,21 @@ const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
 const prefix = "/"
-const bot = new Discord.Client();
+const bot = new Discord.Client({autoReconnect: true});
+
+bot.on("ready", () => {
+    bot.user.setStatus("dnd");
+    bot.user.setActivity(`HypeUniverse`, {
+        url: "https://www.twitch.tv/blvzeisgod",
+        type: "WATCHING"
+    });
+    });
 
 require('./util/eventLoader')(client);
 
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 };
-
-  client.on(`ready`, member => {
-    client.user.setPresence({game: {name: "discord.gg/tmUp7W | /help" , type: 0}});
-});
-
-client.on("ready", () => {
-	client.user.setStatus("dnd")
-});
 
 
 client.on("guildMemberAdd", member => {
